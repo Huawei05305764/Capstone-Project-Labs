@@ -1,0 +1,15 @@
+
+name: Markdown Lint
+
+on:
+  push:
+    paths:
+      - '**/*.md'
+
+jobs:
+  markdown-lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Lint Markdown
+        uses: markdownlint/markdownlint-action@v1
